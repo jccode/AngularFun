@@ -343,6 +343,7 @@ module.exports = (grunt) ->
 					'**/*.{coffee,js}'
 					'!libs/angular.{coffee,js}'
 					'!libs/angular-animate.{coffee,js}'
+					'!libs/angular-ui-router.{coffee,js}'
 					'!libs/angular-route.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
@@ -353,7 +354,7 @@ module.exports = (grunt) ->
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
 						'ngMockE2E': 'libs/angular-mocks.js'
-						'ngRoute': 'libs/angular-route.min.js'
+						'ui.router': 'libs/angular-ui-router.min.js'
 				]
 				require: 'NGBOOTSTRAP'
 			prod:

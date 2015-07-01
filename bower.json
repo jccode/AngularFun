@@ -2,10 +2,10 @@
 	"name": "app",
 	"version": "2.3.0",
 	"dependencies": {
-		"angular": "1.3.8",
-		"angular-animate": "1.3.8",
-		"angular-mocks": "1.3.8",
-		"angular-route": "1.3.8",
+		"angular": "~1.4.0",
+		"angular-animate": "~1.4.0",
+		"angular-mocks": "~1.4.0",
+        "angular-ui-router": "0.2.15",
 		"bootstrap": "3.3.1",
 		"html5shiv": "3.7.2",
 		"json3": "3.3.2",
@@ -21,9 +21,9 @@
 		"angular-mocks": {
 			"scripts/libs": "angular-mocks.js"
 		},
-		"angular-route": {
-			"scripts/libs": "angular-route.min.js{,.map}"
-		},
+        "angular-ui-router": {
+            "scripts/libs": "release/angular-ui-router.min.js"
+        },
 		"bootstrap": {
 			"fonts": "dist/fonts/*.{eot,svg,ttf,woff}",
 			"styles": "less/*.less",
