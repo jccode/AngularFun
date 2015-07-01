@@ -353,8 +353,10 @@ module.exports = (grunt) ->
 				]
 				order: [
 					'libs/jquery.min.js'
-					'jquery':
+					'jquery': [
 						'libs/bootstrap.min.js'
+						'libs/chosen.jquery.min.js'
+					]
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
