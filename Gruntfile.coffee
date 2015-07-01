@@ -110,7 +110,7 @@ module.exports = (grunt) ->
 						middlewares.unshift app
 						middlewares
 					open: true
-					port: 3000
+					port: 0
 
 		# Copies directories and files from one location to another
 		copy:
@@ -344,39 +344,22 @@ module.exports = (grunt) ->
 					'!libs/angular.{coffee,js}'
 					'!libs/angular-animate.{coffee,js}'
 					'!libs/angular-ui-router.{coffee,js}'
-					'!lib/ui-bootstrap-tpls.{coffee,js}'
-					'!lib/showErrors.min.{coffee,js}'
-					'!lib/underscore.{coffee,js}'
+					'!libs/angular-route.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
 					'!libs/require.{coffee,js}'
-					
-					'!libs/jquery.min.{coffee,js}'
-					'!libs/bootstrap.min.{coffee,js}'
-					'!libs/sweetalert.min.{coffee,js}'
-					'!libs/loading-bar.min.{coffee,js}'
-					'!libs/jquery.nicescroll.min.{coffee,js}'
-					'!libs/waves.min.{coffee,js}'
-					'!libs/jquery.bootstrap-growl.min.{coffee,js}'
-					'!libs/chosen.jquery.min.{coffee,js}'
-					'!libs/jquery.inputmask.min.{coffee,js}'
+					# '!libs/jquery.min.js'
+					# '!libs/bootstrap.min.js'
 				]
 				order: [
 					'libs/jquery.min.js'
+					'jquery':
+						'libs/bootstrap.min.js'
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
 						'ngMockE2E': 'libs/angular-mocks.js'
-						'ngCookies': 'libs/angular-cookies.min.js'
 						'ui.router': 'libs/angular-ui-router.min.js'
-						'ui.utils': 'libs/ui-utils.min.js'
-						'ui.bootstrap': 'libs/ui-bootstrap-tpls.min.js'
-						'angular.city.select':'libs/angular-city-select.js'
-						'w5c.validator':'libs/w5cValidator.min.js'
-						'ui.bootstrap.showErrors': 'libs/showErrors.min.js'
-						'angular-md5': 'libs/angular-md5.min.js'
-
-						'angular-loading-bar': 'libs/loading-bar.min.js'
 				]
 				require: 'NGBOOTSTRAP'
 			prod:
@@ -386,40 +369,17 @@ module.exports = (grunt) ->
 					'!libs/angular.{coffee,js}'
 					'!libs/angular-animate.{coffee,js}'
 					'!libs/angular-mocks.{coffee,js}'
-					'!libs/angular-ui-router.{coffee,js}'
-					'!libs/ui-bootstrap-tpls.{coffee,js}'
-					'!lib/showErrors.min.{coffee,js}'
-					'!libs/underscore.{coffee,js}'
+					'!libs/angular-route.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
 					'!libs/require.{coffee,js}'
-
-					'!libs/jquery.min.{coffee,js}'
-					'!libs/bootstrap.min.{coffee,js}'
-					'!libs/sweetalert.min.{coffee,js}'
-					'!libs/loading-bar.min.{coffee,js}'
-					'!libs/jquery.nicescroll.min.{coffee,js}'
-					'!libs/waves.min.{coffee,js}'
-					'!libs/jquery.bootstrap-growl.min.{coffee,js}'
-					'!libs/chosen.jquery.min.{coffee,js}'
-					'!libs/jquery.inputmask.min.{coffee,js}'
-					
 					'!backend/**/*.*'
 				]
 				order: [
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
-						'ngCookies': 'libs/angular-cookies.min.js'
-						'ui.router': 'libs/angular-ui-router.min.js'
-						'ui.utils': 'libs/ui-utils.min.js'
-						'ui.bootstrap': 'libs/ui-bootstrap-tpls.min.js'
-						'angular.city.select':'libs/angular-city-select.js'
-						'w5c.validator':'libs/w5cValidator.min.js'
-						'ui.bootstrap.showErrors': 'libs/showErrors.min.js'
-						'angular-md5': 'libs/angular-md5.min.js'
-
-						'angular-loading-bar': 'libs/loading-bar.min.js'
+						'ngRoute': 'libs/angular-route.min.js'
 				]
 				require: '<%= shimmer.dev.require %>'
 
