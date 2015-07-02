@@ -110,7 +110,7 @@ module.exports = (grunt) ->
 						middlewares.unshift app
 						middlewares
 					open: true
-					port: 0
+					port: 3000
 
 		# Copies directories and files from one location to another
 		copy:
@@ -342,19 +342,19 @@ module.exports = (grunt) ->
 				src: [
 					'**/*.{coffee,js}'
 					'!libs/angular.{coffee,js}'
-					'!libs/angular-animate.{coffee,js}'
-					'!libs/angular-ui-router.{coffee,js}'
-					'!libs/angular-route.{coffee,js}'
+					# '!libs/angular-animate.{coffee,js}'
+					# '!libs/angular-ui-router.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
 					'!libs/require.{coffee,js}'
-					# '!libs/jquery.min.js'
-					# '!libs/bootstrap.min.js'
 				]
 				order: [
 					'libs/jquery.min.js'
 					'jquery': [
 						'libs/bootstrap.min.js'
+						'libs/jquery.bootstrap-growl.min.js'
+						'libs/jquery.nicescroll.min.js"'
+						'libs/jquery.inputmask.min.js'
 						'libs/chosen.jquery.min.js'
 					]
 					'libs/angular.min.js'
@@ -362,6 +362,7 @@ module.exports = (grunt) ->
 						'ngAnimate': 'libs/angular-animate.min.js'
 						'ngMockE2E': 'libs/angular-mocks.js'
 						'ui.router': 'libs/angular-ui-router.min.js'
+						'angular-loading-bar': 'libs/loading-bar.min.js'
 				]
 				require: 'NGBOOTSTRAP'
 			prod:
@@ -369,19 +370,28 @@ module.exports = (grunt) ->
 				src: [
 					'**/*.{coffee,js}'
 					'!libs/angular.{coffee,js}'
-					'!libs/angular-animate.{coffee,js}'
+					# '!libs/angular-animate.{coffee,js}'
+					# '!libs/angular-ui-router.{coffee,js}'
 					'!libs/angular-mocks.{coffee,js}'
-					'!libs/angular-route.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
 					'!libs/require.{coffee,js}'
 					'!backend/**/*.*'
 				]
 				order: [
+					'libs/jquery.min.js'
+					'jquery': [
+						'libs/bootstrap.min.js'
+						'libs/jquery.bootstrap-growl.min.js'
+						'libs/jquery.nicescroll.min.js"'
+						'libs/jquery.inputmask.min.js'
+						'libs/chosen.jquery.min.js'
+					]
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
-						'ngRoute': 'libs/angular-route.min.js'
+						'ui.router': 'libs/angular-ui-router.min.js'
+						'angular-loading-bar': 'libs/loading-bar.min.js'
 				]
 				require: '<%= shimmer.dev.require %>'
 
@@ -410,8 +420,8 @@ module.exports = (grunt) ->
 			scripts:
 				files:
 					'.temp/scripts/ie.min.js': [
-						'.temp/scripts/libs/json3.js'
-						'.temp/scripts/libs/html5shiv-printshiv.js'
+						'.temp/scripts/libs/json3.min.js'
+						'.temp/scripts/libs/html5shiv-printshiv.min.js'
 					]
 
 		# Run tasks when monitored files change

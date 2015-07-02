@@ -6,11 +6,23 @@
 		"angular-animate": "~1.4.0",
 		"angular-mocks": "~1.4.0",
         "angular-ui-router": "0.2.15",
+        "angular-loading-bar": "~0.8.0",
+        
 		"bootstrap": "3.3.1",
+        "bootstrap-growl": "~1.1.0",
+        "jquery.nicescroll": "~3.6.0",
+        "jquery.inputmask": "~3.1.63",
+        "chosen": "~1.4.2",
+        
+        "sweetalert": "~1.0.1",
+        "waves": "~0.7.2",
+        
+        "animate.css": "~3.3.0",
+        "material-design-iconic-font": "~2.0.2",
+        
 		"html5shiv": "3.7.2",
 		"json3": "3.3.2",
-		"requirejs": "2.1.15",
-        "chosen": "~1.4.2"
+		"requirejs": "2.1.15"
 	},
 	"exportsOverride": {
 		"angular": {
@@ -25,24 +37,29 @@
         "angular-ui-router": {
             "scripts/libs": "release/angular-ui-router.min.js"
         },
+        "angular-loading-bar": {
+            "styles": "build/loading-bar.min.css",
+            "scripts/libs": "build/loading-bar.min.js"
+        },
+
+        "jquery": {
+			"scripts/libs": "dist/jquery.min.{js,map}"
+		},
 		"bootstrap": {
             "scripts/libs": "dist/js/bootstrap.min.js",
 			"fonts": "dist/fonts/*.{eot,svg,ttf,woff}",
 			"styles": "less/*.less",
 			"styles/mixins": "less/mixins/*.less"
 		},
-		"html5shiv": {
-			"scripts/libs": "dist/html5shiv-printshiv.min.js"
-		},
-		"jquery": {
-			"scripts/libs": "dist/jquery.min.{js,map}"
-		},
-		"json3": {
-			"scripts/libs": "lib/json3.min.js"
-		},
-		"requirejs": {
-			"scripts/libs": "require.js"
-		},
+        "bootstrap-growl": {
+            "scripts/libs": "jquery.bootstrap-growl.min.js"
+        },
+        "jquery.nicescroll": {
+            "scripts/libs": "dist/jquery.nicescroll.min.js"
+        },
+        "jquery.inputmask": {
+            "scripts/libs": "dist/inputmask/jquery.inputmask.min.js"
+        },
         "chosen": {
             "styles": [
                 "chosen.min.css",
@@ -50,6 +67,33 @@
                 "chosen-sprite@2x.png"
             ],
             "scripts/libs": "chosen.jquery.min.js"
-        }
+        },
+
+        "sweetalert": {
+            "styles": "dist/sweetalert.css",
+            "scripts/libs": "dist/sweetalert.min.js"
+        },
+        "waves": {
+            "styles": "waves.min.css",
+            "scripts/libs": "waves.min.js{,.map}"
+        },
+        
+        "animate.css": {
+            "styles": "animate.min.css"
+        },
+        "material-design-iconic-font": {
+            "fonts": "dist/font/*.{ttf,woff}",
+            "styles": "dist/css/material-design-iconic-font.min.css"
+        },
+        
+		"html5shiv": {
+			"scripts/libs": "dist/html5shiv-printshiv.min.js"
+		},
+		"json3": {
+			"scripts/libs": "lib/json3.min.js"
+		},
+		"requirejs": {
+			"scripts/libs": "require.js"
+		}
 	}
 }
