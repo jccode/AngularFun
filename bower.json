@@ -74,8 +74,8 @@
             "scripts/libs": "dist/sweetalert.min.js"
         },
         "waves": {
-            "styles": "waves.min.css",
-            "scripts/libs": "waves.min.js{,.map}"
+            "styles": "dist/waves.min.css",
+            "scripts/libs": "dist/waves.min.js{,.map}"
         },
         
         "animate.css": {
