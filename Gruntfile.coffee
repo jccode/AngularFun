@@ -360,6 +360,7 @@ module.exports = (grunt) ->
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
+						'ngResource': 'libs/angular-resource.min.js'
 						'ngMockE2E': 'libs/angular-mocks.js'
 						'ui.router': 'libs/angular-ui-router.min.js'
 						'angular-loading-bar': 'libs/loading-bar.min.js'
@@ -390,6 +391,7 @@ module.exports = (grunt) ->
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
+						'ngResource': 'libs/angular-resource.min.js'
 						'ui.router': 'libs/angular-ui-router.min.js'
 						'angular-loading-bar': 'libs/loading-bar.min.js'
 				]

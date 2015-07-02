@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html ng-controller="materialadminCtrl as mactrl">
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:ng="http://angularjs.org" xmlns:app="ignored"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" xmlns:ng="http://angularjs.org" xmlns:app="ignored"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9" xmlns:ng="http://angularjs.org" xmlns:app="ignored"> <![endif]-->
@@ -54,9 +54,9 @@
 			}
 		</style>
 	</head>
-	<body ng-cloak class="ng-cloak">
-		<ng:view></ng:view>
-		<ng:include src="'/views/site.html'"></ng:include>
+	<body ng-cloak class="ng-cloak" ng-class="{ 'sw-toggled': mactrl.layoutType === '1' }">
+		<ui-view></ui-view>
+		<!-- <ng:include src="'/views/site.html'"></ng:include> -->
 
 		<% if (config.environment && config.environment === 'prod') { %>
 			<script src="<%= config.getHashedFile('./.temp/scripts/scripts.min.js', {trim: './.temp'}) %>"></script>

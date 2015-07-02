@@ -3,10 +3,14 @@ class Config
 		$stateProvider
 			.state 'github',
 				url: '/github/:id'
-				abstract: true
 				controller: 'gitHubController'
+				templateUrl: 'views/site.html'
+				
+			.state 'typography',
+				url: '/typography',
+				templateUrl: 'views/typography.html'
 			
-		$urlRouterProvider.otherwise '/github'
+		$urlRouterProvider.otherwise '/typography'
 
 
 angular.module('app').config ['$stateProvider', '$urlRouterProvider', Config]
